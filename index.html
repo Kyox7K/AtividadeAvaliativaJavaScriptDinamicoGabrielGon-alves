@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Animes</title>
+    <style>
+         body {
+            padding: 20px;
+            background-image: url(https://wallpapercave.com/wp/wp5146358.jpg);
+        }
+        label, input, select, button {   
+            margin-bottom: 10px;
+            width: 100%;
+            color: red;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            
+        }
+        table, th, td {
+            border: 1px solid #000;
+            text-align: center;
+            
+        }
+        th, td {
+            padding: 8px;
+            
+        }
+select{
+    color: black;
+}
+input{
+    color: black;
+}
+button{
+    color: black;
+}
+
+table{
+ background-color: white;
+}
+    </style>
+</head>
+<body>
+
+    <h1>Cadastro de Animes</h1>
+
+    <form id="animeForm">
+        <label for="nome">Nome do Anime</label>
+        <input type="text" id="nome">
+
+        <label for="genero">Gênero do Anime</label>
+        <select id="genero"> 
+            <option value="">Selecione o Gênero</option>
+            <option value="Terror">Terror</option>
+            <option value="Comédia">Comédia</option>
+            <option value="Romance">Romance</option>
+            <option value="Ação">Ação</option>
+            <option value="Isekai">Isekai</option>
+            <option value="Outros">Outros</option>
+        </select>
+
+        <label for="ano">Ano de Lançamento</label>
+        <input type="number" id="ano" min="1900" max="2099">
+
+        <label for="nota">Nota (0 a 10)</label>
+        <input type="number" id="nota" min="0" max="10">
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Gênero</th>
+                <th>Ano</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody id="animeTableBody">
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
